@@ -15,9 +15,8 @@ steps:
     pip install -r requirements.txt
   displayName: 'Install dependencies'
 
-- script: python run1.py
-
 - task: PythonScript@0
 	inputs: 
 		scriptPath: 'run1.py'
 		argument: -test_data $(testVar)
+
