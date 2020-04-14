@@ -1,6 +1,6 @@
 import argparse 
 
 parse = argparse.ArgumentParser(description="ForTest!")
-parse.add_parameter("-test_data")
+parse.add_argument("-test_data")
 
 print(parse)
