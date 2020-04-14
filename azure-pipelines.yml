@@ -1,23 +1,12 @@
-# Python package
-# Create and test a Python package on multiple Python versions.
-# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/python
-
-trigger:
-- master
-
-pool:
-  vmImage: 'ubuntu-latest'
-strategy:
-  matrix:
-      Python37:
-      python.version: '3.7'
-
+resources:
+- repo: self
+queue:
+  name: Hosted Ubuntu 1604
 steps:
 - task: UsePythonVersion@0
+  displayName: 'Use Python 3.6'
   inputs:
-    versionSpec: '$(python.version)'
-  displayName: 'Use Python $(python.version)'
+    versionSpec: 3.6
 
 - script: |
     python -m pip install --upgrade pip
