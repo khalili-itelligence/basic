@@ -15,9 +15,3 @@ steps:
 
 - script: python test_test1.py
 
-- task: InvokeRESTAPI@1
-  inputs:
-    connectionType: 'connectedServiceName'
-    method: 'GET'
-    waitForCompletion: 'false'
-
