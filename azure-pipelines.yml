@@ -1,3 +1,5 @@
+#trigger: none
+
 resources:
 - repo: self
 queue:
@@ -13,11 +15,9 @@ steps:
     pip install -r requirements.txt
   displayName: 'Install dependencies'
 
-- script: python test_test1.py
+- script: python run1.py
 
-- task: InvokeRESTAPI@1
-  inputs:
-    connectionType: 'connectedServiceName'
-    method: 'GET'
-    waitForCompletion: 'false'
-
+- task: PythonScript@0
+	inputs: 
+		scriptPath: 'run1.py'
+		argument: -test_data $(testVar)
