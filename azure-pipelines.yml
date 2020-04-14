@@ -18,5 +18,5 @@ steps:
 - task: PythonScript@0
   inputs: 
     scriptPath: 'run1.py'
-    argument: $(testVar)
+    arguments: $(testVar)
 
