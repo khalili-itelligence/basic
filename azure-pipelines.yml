@@ -16,7 +16,7 @@ steps:
   displayName: 'Install dependencies'
 
 - task: PythonScript@0
-	inputs: 
-		scriptPath: 'run1.py'
-		argument: -test_data $(testVar)
+  inputs: 
+    scriptPath: 'run1.py'
+    argument: -test_data $(testVar)
 
