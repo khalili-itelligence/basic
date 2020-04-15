@@ -25,5 +25,6 @@ steps:
 - task: PythonScript@0
   inputs: 
     scriptPath: 'run1.py'
+    arguments: $(testVar)
     # arguments: ${{ parameters.myNumber }}
 
