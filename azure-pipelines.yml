@@ -25,5 +25,5 @@ steps:
 - task: PythonScript@0
   inputs: 
     scriptPath: 'run1.py'
-    arguments: ${{ parameters.ReleaseNumber }}
+    arguments: ${{ parameters.myString }}
 
