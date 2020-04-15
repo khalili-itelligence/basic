@@ -8,8 +8,8 @@ queue:
 variables:
 - group: testGroup
 
-parameters:
-- name: myNumber
+# parameters:
+# - name: myNumber
 
 steps:
 - task: UsePythonVersion@0
