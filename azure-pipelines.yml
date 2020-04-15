@@ -9,7 +9,7 @@ variables:
 - group: testGroup
 
 parameters:
-- name: myString
+- name: myNumber
 
 steps:
 - task: UsePythonVersion@0
@@ -25,5 +25,5 @@ steps:
 - task: PythonScript@0
   inputs: 
     scriptPath: 'run1.py'
-    # arguments: ${{ parameters.myString }}
+    # arguments: ${{ parameters.myNumber }}
 
