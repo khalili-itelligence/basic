@@ -22,5 +22,5 @@ steps:
 - task: PythonScript@0
   inputs: 
     scriptPath: 'run1.py'
-    arguments: echo $(var1)
+    arguments: ${{ parameters.var3 }}
 
