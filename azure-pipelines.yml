@@ -4,6 +4,10 @@ resources:
 - repo: self
 queue:
   name: Hosted Ubuntu 1604
+
+variables:
+- group: testGroup
+
 steps:
 - task: UsePythonVersion@0
   displayName: 'Use Python 3.6'
@@ -18,5 +22,5 @@ steps:
 - task: PythonScript@0
   inputs: 
     scriptPath: 'run1.py'
-    arguments: $(testVar)
+    arguments: echo $(var1)
 
