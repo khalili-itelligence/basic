@@ -8,6 +8,9 @@ queue:
 variables:
 - group: testGroup
 
+parameters:
+- name: myString
+
 steps:
 - task: UsePythonVersion@0
   displayName: 'Use Python 3.6'
